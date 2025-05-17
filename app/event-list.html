@@ -85,14 +85,6 @@
             <div class="row">
                 <div class="col-lg-7 text-left mr-auto text-white">
                     <h2 class="display-4 mb-3 text-white">Nuestas Variedades</h2>
-                    <ol class="breadcrumb text-left">
-                        <li class="breadcrumb-item">
-                            <a href="">
-                                <i class="fa fa-home"></i>
-                            </a>
-                        </li>
-                        <li class="breadcrumb-item">Productos</li>
-                    </ol>
                 </div>
             </div>
         </div>
@@ -101,7 +93,29 @@
           </svg>
     </div>
     <!--Page header end-->
-    <div class="container pt100 pb70">
+    <div class="container text-center mb-3">
+        <input type="text" id="searchBox" class="form-control w-50 d-inline-block" placeholder="Buscar productos...">
+        <button class="btn btn-primary ml-2" onclick="filterProducts()">Buscar</button>
+    </div>
+    
+    
+    <script>
+        function filterProducts() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let items = document.querySelectorAll(".product-item");
+    
+            items.forEach(item => {
+                let productName = item.getAttribute("data-name").toLowerCase();
+                let keywords = productName.split(" "); // Divide el nombre en palabras
+    
+                // Muestra el producto si alguna palabra coincide con la búsqueda
+                let match = keywords.some(word => word.includes(input)); 
+                item.style.display = match ? "block" : "none";
+            });
+        }
+    </script>
+    
+    <div class="container pt50 pb50">
         <div class="row">
             <div class="col-lg-10 ml-auto mr-auto mb30">
                 <div class="row align-items-center mb-3">
@@ -111,29 +125,28 @@
                     </div>
                 </div>
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                 <!--Ésta parte, el primer div sirve para ejecutar el escript de arriba, hay que colocar en data name lo mismo que en la descripción-->
+                <div class="mb-30 event-list product-item" data-name="Cebolla Morada y Ajo Chilote"> 
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
-                            <div class="text-secondary display-3">
-                                01
-                            </div>
+                            <div class="text-secondary display-3">01</div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Cebolla Morada y Ajo Chilote</a>
+                            <a href="#!" class="h3">Cebolla Morada y Ajo Chilote</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-12 py-3 text-center">
-                           <a href="#!">
-                               <img src="assets/images/variedades1.png" alt="" class="img-fluid">
-                           </a>
+                            <a href="#!">
+                                <img src="assets/images/variedades1.png" alt="Sal Cebolla Morada y Ajo Chilote" class="img-fluid">
+                            </a>
                         </div>
                     </div>
-                </div>
+                </div>                
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Cochayuyo">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -141,7 +154,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Cochayuyo</a>
+                            <a href="#!" class="h3">Cochayuyo</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -155,7 +168,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Carmenere">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -163,7 +176,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Carmenere</a>
+                            <a href="#!" class="h3">Carmenere</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -177,7 +190,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Mostaza y Semillas">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -185,7 +198,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Mostaza y Semillas</a>
+                            <a href="#!" class="h3">Mostaza y Semillas</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -199,7 +212,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Limón, Pimienta, Ajo, Cebolla">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -207,7 +220,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Limón, Pimienta, Ajo, Cebolla</a>
+                            <a href="#!" class="h3">Limón, Pimienta, Ajo, Cebolla</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -220,8 +233,7 @@
                     </div>
                 </div>
 
-                <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Limón Merken">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -229,7 +241,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Limón Merken</a>
+                            <a href="#!" class="h3">Limón Merken</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -243,7 +255,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Pimienta Merkén">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -251,7 +263,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Pimienta Merkén</a>
+                            <a href="#!" class="h3">Pimienta Merkén</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -265,7 +277,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Orégano, Ajo, Merken">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -273,7 +285,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Orégano, Ajo, Merken</a>
+                            <a href="#!" class="h3">Orégano, Ajo, Merken</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -287,7 +299,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Romero">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -295,7 +307,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Romero</a>
+                            <a href="#!" class="h3">Romero</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -309,7 +321,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Eneldo">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -317,7 +329,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Eneldo</a>
+                            <a href="#!" class="h3">Eneldo</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -331,7 +343,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Curcuma Ajo">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -353,7 +365,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Tomate, Cilantro, Cebolla">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -361,7 +373,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Tomate Cilantro Cebolla</a>
+                            <a href="#!" class="h3">Tomate, Cilantro, Cebolla</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -375,7 +387,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Ajo, Tomillo, Orégano, Cebolla">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -397,7 +409,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Mix Pimienta">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -405,7 +417,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Mix Pimientas</a>
+                            <a href="#!" class="h3">Mix Pimienta</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -419,7 +431,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Rosada del Himalaya con Pimienta">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -427,7 +439,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Rosada del Himalaya con Pimienta</a>
+                            <a href="#!" class="h3">Rosada del Himalaya con Pimienta</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -441,7 +453,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Rosada del Himalaya">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -449,7 +461,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Rosada del Himalaya</a>
+                            <a href="#!" class="h3">Rosada del Himalaya</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -463,7 +475,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Flor de Jamaica">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -471,7 +483,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Flor de Jamaica</a>
+                            <a href="#!" class="h3">Flor de Jamaica</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -485,7 +497,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Ajo Limón">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -493,7 +505,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Ajo Limón</a>
+                            <a href="#!" class="h3">Ajo Limón</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -507,7 +519,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Cúrcuma, Ajo, Pimienta">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -515,7 +527,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Cúrcuma Ajo Pimienta</a>
+                            <a href="#!" class="h3">Cúrcuma, Ajo, Pimienta</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -529,7 +541,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Merkén, Ajo, Perejil, Orégano">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -537,7 +549,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Merkén Ajo Perejil Orégano</a>
+                            <a href="#!" class="h3">Merkén, Ajo, Perejil, Orégano</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -551,7 +563,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Erizo">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -559,7 +571,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Erizo</a>
+                            <a href="#!" class="h3">Erizo</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -573,7 +585,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Cebolla Caramelizada">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -581,7 +593,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Cebolla Caramelizada</a>
+                            <a href="#!" class="h3">Cebolla Caramelizada</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -595,7 +607,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Tomate, Cilantro, Cebolla">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -603,7 +615,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Tomate Cilantro Cebolla</a>
+                            <a href="#!" class="h3">Tomate, Cilantro, Cebolla</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -617,7 +629,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Orégano, Cúrcuma, Paprika">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -625,7 +637,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Orégano Cúrcuma Paprika</a>
+                            <a href="#!" class="h3">Orégano, Cúrcuma, Paprika</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -639,7 +651,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Piure">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -647,7 +659,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Piure</a>
+                            <a href="#!" class="h3">Piure</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -661,7 +673,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Albahaca">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -669,7 +681,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Albahaca</a>
+                            <a href="#!" class="h3">Albahaca</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -683,7 +695,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Maracuyá">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -691,7 +703,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Maracuyá</a>
+                            <a href="#!" class="h3">Maracuyá</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -705,7 +717,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Aceituna">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -713,7 +725,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Aceituna</a>
+                            <a href="#!" class="h3">Aceituna</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -727,7 +739,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Semilla de Cilantro">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -735,7 +747,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Semilla de Cilantro</a>
+                            <a href="#!" class="h3">Semilla de Cilantro</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -749,7 +761,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Maqui">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -757,7 +769,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Maqui</a>
+                            <a href="#!" class="h3">Maqui</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -771,7 +783,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Ajo Negro">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -779,7 +791,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Ajo Negro</a>
+                            <a href="#!" class="h3">Ajo Negro</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -793,7 +805,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Ají Puta Madre">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
@@ -801,7 +813,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center text-sm-left py-3">
-                            <a href="#!" class="h3">Sal Ají Puta Madre</a>
+                            <a href="#!" class="h3">Ají Puta Madre</a>
                             <div class="pt-3">
                                 <span class="d-inline-block mr-3">Precio</span>
                             </div>
@@ -815,7 +827,7 @@
                 </div>
 
                 <!-- Productos -->
-                <div class="mb-30 event-list">
+                <div class="mb-30 event-list product-item" data-name="Sal de Cáhuil">
                     <div class="row align-items-center d-flex flex">
                         <div class="col-md-3 col-sm-12 py-3 text-center">
                             <div class="text-secondary display-3">
