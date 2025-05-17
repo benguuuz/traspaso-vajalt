@@ -1973,7 +1973,6 @@ a.ui-button:active,
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden;
 }
 
 .mfp-container {
@@ -3197,8 +3196,10 @@ mark {
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 60%;
+  object-fit: cover;
 }
 
 .img-thumbnail {

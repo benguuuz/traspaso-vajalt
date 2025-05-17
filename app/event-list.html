@@ -93,57 +93,68 @@
           </svg>
     </div>
     <!--Page header end-->
+    <!--Contenedor del buscador -->
     <div class="container text-center mb-3">
         <input type="text" id="searchBox" class="form-control w-50 d-inline-block" placeholder="Buscar productos...">
         <button class="btn btn-primary ml-2" onclick="filterProducts()">Buscar</button>
     </div>
-    
-    
+    <!--Inicio del script de js -->
     <script>
+        //Funcion de busqueda por palabra, descomone cada palabra, cuando encuentra lo muestra, sino lo bloquea
+        function filterProducts() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let productos = document.querySelectorAll(".product-item");
+
+            productos.forEach(producto => {
+            let nombre = producto.getAttribute("data-name").toLowerCase();
+            producto.style.display = nombre.includes(input) ? "block" : "none";
+            });
+        }
+        //Recarga la pagina al momento de ejecutar la pagina
         document.addEventListener("DOMContentLoaded", function() {
             mostrarProductos();
         });
-    
+        //Muestra los productos creados
         function mostrarProductos() {
             let contenedor = document.getElementById("productList");
             contenedor.innerHTML = ""; 
-    
+            //COnstante de numero de whatsapp
             const numeroWhatsApp = "56940978255"; // Número del proveedor
-    
+            //Listado de productos, aqui se modifica la descripcion, el id, la imagen y hasta el precio
             const productos = [
-                { id: "01", nombre: "Cebolla Morada y Ajo Chilote", imagen: "assets/images/variedades1.png" },
-                { id: "02", nombre: "Cochayuyo", imagen: "assets/images/variedades2.png" },
-                { id: "03", nombre: "Carmenere", imagen: "assets/images/variedades3.png" },
-                { id: "04", nombre: "Mostaza y Semillas", imagen: "assets/images/variedades4.png" },
-                { id: "05", nombre: "Limón, Pimienta, Ajo, Cebolla", imagen: "assets/images/variedades5.png" },
-                { id: "06", nombre: "Limón Merken", imagen: "assets/images/variedades6.png" },
-                { id: "07", nombre: "Pimienta Merkén", imagen: "assets/images/variedades7.png" },
-                { id: "08", nombre: "Orégano, Ajo, Merken", imagen: "assets/images/variedades8.png" },
-                { id: "09", nombre: "Romero", imagen: "assets/images/variedades9.png" },
-                { id: "10", nombre: "Eneldo", imagen: "assets/images/variedades10.png" },
-                { id: "11", nombre: "Sal Cúrcuma Ajo", imagen: "assets/images/variedades11.png" },
-                { id: "12", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades12.png" },
-                { id: "13", nombre: "Sal Ajo Tomillo Orégano Cebolla", imagen: "assets/images/variedades13.png" },
-                { id: "14", nombre: "Mix Pimienta", imagen: "assets/images/variedades14.png" },
-                { id: "15", nombre: "Rosada del Himalaya con Pimienta", imagen: "assets/images/variedades15.png" },
-                { id: "16", nombre: "Rosada del Himalaya", imagen: "assets/images/variedades16.png" },
-                { id: "17", nombre: "Flor de Jamaica", imagen: "assets/images/variedades17.png" },
-                { id: "18", nombre: "Ajo Limón", imagen: "assets/images/variedades18.png" },
-                { id: "19", nombre: "Cúrcuma, Ajo, Pimienta", imagen: "assets/images/variedades19.png" },
-                { id: "20", nombre: "Merkén, Ajo, Perejil, Orégano", imagen: "assets/images/variedades20.png" },
-                { id: "21", nombre: "Erizo", imagen: "assets/images/variedades21.png" },
-                { id: "22", nombre: "Cebolla Caramelizada", imagen: "assets/images/variedades22.png" },
-                { id: "23", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades23.png" },
-                { id: "24", nombre: "Orégano, Cúrcuma, Paprika", imagen: "assets/images/variedades24.png" },
-                { id: "25", nombre: "Piure", imagen: "assets/images/variedades25.png" },
-                { id: "26", nombre: "Albahaca", imagen: "assets/images/variedades26.png" },
-                { id: "27", nombre: "Maracuyá", imagen: "assets/images/variedades27.png" },
-                { id: "28", nombre: "Aceituna", imagen: "assets/images/variedades28.png" },
-                { id: "29", nombre: "Semilla de Cilantro", imagen: "assets/images/variedades29.png" },
-                { id: "30", nombre: "Maqui", imagen: "assets/images/variedades30.png" },
-                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png" }
+                { id: "01", nombre: "Cebolla Morada y Ajo Chilote", imagen: "assets/images/variedades1.png" , precio: "$1000" },
+                { id: "02", nombre: "Cochayuyo", imagen: "assets/images/variedades2.png", precio: "$1000" },
+                { id: "03", nombre: "Carmenere", imagen: "assets/images/variedades3.png", precio: "$1000" },
+                { id: "04", nombre: "Mostaza y Semillas", imagen: "assets/images/variedades4.png", precio: "$1000" },
+                { id: "05", nombre: "Limón, Pimienta, Ajo, Cebolla", imagen: "assets/images/variedades5.png", precio: "$1000" },
+                { id: "06", nombre: "Limón Merken", imagen: "assets/images/variedades6.png", precio: "$1000" },
+                { id: "07", nombre: "Pimienta Merkén", imagen: "assets/images/variedades7.png", precio: "$1000" },
+                { id: "08", nombre: "Orégano, Ajo, Merken", imagen: "assets/images/variedades8.png", precio: "$1000" },
+                { id: "09", nombre: "Romero", imagen: "assets/images/variedades9.png", precio: "$1000" },
+                { id: "10", nombre: "Eneldo", imagen: "assets/images/variedades10.png", precio: "$1000" },
+                { id: "11", nombre: "Cúrcuma, Ajo", imagen: "assets/images/variedades11.png",precio: "$1000" },
+                { id: "12", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades12.png", precio: "$1000" },
+                { id: "13", nombre: "Ajo, Tomillo, Orégano, Cebolla", imagen: "assets/images/variedades13.png", precio: "$1000" },
+                { id: "14", nombre: "Mix Pimienta", imagen: "assets/images/variedades14.png", precio: "$1000" },
+                { id: "15", nombre: "Rosada del Himalaya con Pimienta", imagen: "assets/images/variedades15.png", precio: "$1000" },
+                { id: "16", nombre: "Rosada del Himalaya", imagen: "assets/images/variedades16.png", precio: "$1000" },
+                { id: "17", nombre: "Flor de Jamaica", imagen: "assets/images/variedades17.png", precio: "$1000" },
+                { id: "18", nombre: "Ajo Limón", imagen: "assets/images/variedades18.png", precio: "$1000" },
+                { id: "19", nombre: "Cúrcuma, Ajo, Pimienta", imagen: "assets/images/variedades19.png", precio: "$1000" },
+                { id: "20", nombre: "Merkén, Ajo, Perejil, Orégano", imagen: "assets/images/variedades20.png", precio: "$1000" },
+                { id: "21", nombre: "Erizo", imagen: "assets/images/variedades21.png", precio: "$1000" },
+                { id: "22", nombre: "Cebolla Caramelizada", imagen: "assets/images/variedades22.png", precio: "$1000" },
+                { id: "23", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades23.png", precio: "$1000" },
+                { id: "24", nombre: "Orégano, Cúrcuma, Paprika", imagen: "assets/images/variedades24.png", precio: "$1000" },
+                { id: "25", nombre: "Piure", imagen: "assets/images/variedades25.png", precio: "$1000" },
+                { id: "26", nombre: "Albahaca", imagen: "assets/images/variedades26.png", precio: "$1000" },
+                { id: "27", nombre: "Maracuyá", imagen: "assets/images/variedades27.png", precio: "$1000" },
+                { id: "28", nombre: "Aceituna", imagen: "assets/images/variedades28.png", precio: "$1000" },
+                { id: "29", nombre: "Semilla de Cilantro", imagen: "assets/images/variedades29.png", precio: "$1000" },
+                { id: "30", nombre: "Maqui", imagen: "assets/images/variedades30.png", precio: "$1000" },
+                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png", precio: "$1000" }
             ];
-    
+            //Plantilla del producto que se rellena
             productos.forEach(producto => {
                 let mensaje = encodeURIComponent(`Me interesa el siguiente artículo: ${producto.nombre}`);
                 let whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
@@ -157,7 +168,7 @@
                             <div class="col-md-6 text-center text-sm-left">
                                 <a href="${whatsappURL}" class="h3" target="_blank">${producto.nombre}</a>
                                 <div class="pt-3">
-                                    <span class="d-inline-block mr-3">Precio</span>
+                                    <span class="d-inline-block mr-3">${producto.precio}</span>
                                 </div>
                             </div>
                             <div class="col-md-3 text-center">
@@ -171,8 +182,8 @@
                 contenedor.innerHTML += productoHTML;
             });
         }
-    </script>                    
-                <div id="productList"></div> <!-- Aquí se insertarán los productos dinámicamente -->
+            </script>                    
+            <div id="productList"></div> <!-- Aquí se insertarán los productos dinámicamente -->
             </div>
         </div>
     </div>
