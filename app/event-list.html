@@ -86,7 +86,7 @@
                 <div class="col-lg-7 text-left mr-auto text-white">
                     <h2 class="display-4 mb-3 text-white">Nuestas Variedades</h2>
                     <p class="text-muted">
-                        ¿Cual va a ser tu proxima sal?
+                        ¿Cuál va a ser tu próxima sal?
                     </p>
                 </div>
             </div>
@@ -157,7 +157,9 @@
                 { id: "28", nombre: "Aceituna", imagen: "assets/images/variedades28.png", precio: "$1000" },
                 { id: "29", nombre: "Semilla de Cilantro", imagen: "assets/images/variedades29.png", precio: "$1000" },
                 { id: "30", nombre: "Maqui", imagen: "assets/images/variedades30.png", precio: "$1000" },
-                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png", precio: "$1000" }
+                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png", precio: "$1000" },
+                { id: "32", nombre: "Ají Puta Madre", imagen: "assets/images/variedades32.png", precio: "$1000" },
+                { id: "33", nombre: "De Cáhuil", imagen: "assets/images/variedades33.png", precio: "$1000" },
             ];
             //Plantilla del producto que se rellena
             productos.forEach(producto => {
@@ -173,7 +175,12 @@
                             <div class="col-md-6 text-center text-sm-left">
                                 <a href="${whatsappURL}" class="h3" target="_blank">${producto.nombre}</a>
                                 <div class="pt-3">
-                                    <span class="d-inline-block mr-3">${producto.precio}</span>
+                                <ul class="list-unstyled">
+                                    <li><strong>Molinillo 80g:</strong> $3.000</li>
+                                    <li><strong>Molinillo 160g:</strong> $6.500</li>
+                                    <li><strong>Molinillo 300g Parrillera:</strong> $6.000</li>
+                                    <li><strong>Doypack 200g:</strong> $3.500</li>
+                                </ul>
                                 </div>
                             </div>
                             <div class="col-md-3 text-center">
