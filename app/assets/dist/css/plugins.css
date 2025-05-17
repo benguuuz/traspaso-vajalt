@@ -3196,6 +3196,11 @@ mark {
 }
 
 .img-fluid {
+  width: 500px;
+  border-radius: 20%;
+}
+
+.img-iconos{
   width: 150px;
   height: 150px;
   border-radius: 60%;

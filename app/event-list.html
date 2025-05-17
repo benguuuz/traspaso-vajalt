@@ -79,22 +79,27 @@
             </div>
         </div>
     </nav>    
-    <div class="page-header" data-jarallax='{"speed": 0.4}' style='background-image: url("assets/images/img2_inicio.jpg")'>
+    <div class="page-header page-header-shape" data-jarallax='{"speed": 0.4}' style='background-image: url("assets/images/img2_inicio.jpg")'>
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 text-left mr-auto text-white">
                     <h2 class="display-4 mb-3 text-white">Nuestas Variedades</h2>
+                    <p class="text-muted">
+                        ¿Cual va a ser tu proxima sal?
+                    </p>
                 </div>
             </div>
         </div>
-        <svg class="svg-abs svg-f-btm z-index-9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 223" enable-background="new 0 0 1920 223" xml:space="preserve">
-            <polygon class="svg-white" opacity="1" points="0,223 1920,223 1920,0 "></polygon>
+        <svg class="svg-abs svg-f-btm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 140" style="margin-bottom: -9px; enable-background:new 0 0 1920 140;" xml:space="preserve">
+            <path class="svg-white" d="M960,92.9C811.4,93.3,662.8,89.4,515.3,79c-138.6-9.8-277.1-26.2-409-53.3C97.8,24,0,6.5,0,0c0,0,0,140,0,140
+              l960-1.2l960,1.2c0,0,0-140,0-140c0,2.7-42.1,11.3-45.8,12.2c-45.1,11-91.5,20.1-138.4,28.1c-176.2,30.1-359.9,43.8-542.9,48.9
+              C1115.4,91.4,1037.7,92.7,960,92.9z"></path>
           </svg>
     </div>
     <!--Page header end-->
     <!--Contenedor del buscador -->
-    <div class="container text-center mb-3">
+    <div class="container text-center mb-3 mt-5">
         <input type="text" id="searchBox" class="form-control w-50 d-inline-block" placeholder="Buscar productos...">
         <button class="btn btn-primary ml-2" onclick="filterProducts()">Buscar</button>
     </div>
@@ -173,7 +178,7 @@
                             </div>
                             <div class="col-md-3 text-center">
                                 <a href="${whatsappURL}" target="_blank">
-                                    <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid">
+                                    <img src="${producto.imagen}" alt="${producto.nombre}" class="img-iconos">
                                 </a>
                             </div>
                         </div>
@@ -190,15 +195,17 @@
     </div>
     <!--footer-->
    <!--footer-->
-    <footer class="footer">
-        <div class="container">
-                <div class="col-lg-6 mr-auto ml-auto">
-                    <span>&COPY; Copyright 2025.
-                    </span>
-                </div>
-            </div>
-        </div>
-    </footer>
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-2">&copy; 2025 Vajalt - Todos los derechos reservados</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#" class="text-white">Términos y condiciones</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Política de privacidad</a></li>
+        </ul>
+        <p class="mt-3">"El sabor de lo auténtico"</p>
+    </div>
+</footer>
+
     <!--/.footer-->
     <!--/.footer-->
     <!--compile plugins-->
