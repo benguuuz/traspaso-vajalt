@@ -836,6 +836,16 @@ Image cards**/
   padding-bottom: 0.25rem;
   opacity: 0.6;
 }
+.navbar-tools ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.navbar-tools ul li {
+  margin: 0 10px; /* Espaciado entre los íconos */
+}
+
 
 /**
 Split images

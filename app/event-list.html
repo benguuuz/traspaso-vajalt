@@ -127,74 +127,77 @@
             const numeroWhatsApp = "56940978255"; // Número del proveedor
             //Listado de productos, aqui se modifica la descripcion, el id, la imagen y hasta el precio
             const productos = [
-                { id: "01", nombre: "Cebolla Morada y Ajo Chilote", imagen: "assets/images/variedades1.png" , precio: "$1000" },
-                { id: "02", nombre: "Cochayuyo", imagen: "assets/images/variedades2.png", precio: "$1000" },
-                { id: "03", nombre: "Carmenere", imagen: "assets/images/variedades3.png", precio: "$1000" },
-                { id: "04", nombre: "Mostaza y Semillas", imagen: "assets/images/variedades4.png", precio: "$1000" },
-                { id: "05", nombre: "Limón, Pimienta, Ajo, Cebolla", imagen: "assets/images/variedades5.png", precio: "$1000" },
-                { id: "06", nombre: "Limón Merken", imagen: "assets/images/variedades6.png", precio: "$1000" },
-                { id: "07", nombre: "Pimienta Merkén", imagen: "assets/images/variedades7.png", precio: "$1000" },
-                { id: "08", nombre: "Orégano, Ajo, Merken", imagen: "assets/images/variedades8.png", precio: "$1000" },
-                { id: "09", nombre: "Romero", imagen: "assets/images/variedades9.png", precio: "$1000" },
-                { id: "10", nombre: "Eneldo", imagen: "assets/images/variedades10.png", precio: "$1000" },
-                { id: "11", nombre: "Cúrcuma, Ajo", imagen: "assets/images/variedades11.png",precio: "$1000" },
-                { id: "12", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades12.png", precio: "$1000" },
-                { id: "13", nombre: "Ajo, Tomillo, Orégano, Cebolla", imagen: "assets/images/variedades13.png", precio: "$1000" },
-                { id: "14", nombre: "Mix Pimienta", imagen: "assets/images/variedades14.png", precio: "$1000" },
-                { id: "15", nombre: "Rosada del Himalaya con Pimienta", imagen: "assets/images/variedades15.png", precio: "$1000" },
-                { id: "16", nombre: "Rosada del Himalaya", imagen: "assets/images/variedades16.png", precio: "$1000" },
-                { id: "17", nombre: "Flor de Jamaica", imagen: "assets/images/variedades17.png", precio: "$1000" },
-                { id: "18", nombre: "Ajo Limón", imagen: "assets/images/variedades18.png", precio: "$1000" },
-                { id: "19", nombre: "Cúrcuma, Ajo, Pimienta", imagen: "assets/images/variedades19.png", precio: "$1000" },
-                { id: "20", nombre: "Merkén, Ajo, Perejil, Orégano", imagen: "assets/images/variedades20.png", precio: "$1000" },
-                { id: "21", nombre: "Erizo", imagen: "assets/images/variedades21.png", precio: "$1000" },
-                { id: "22", nombre: "Cebolla Caramelizada", imagen: "assets/images/variedades22.png", precio: "$1000" },
-                { id: "23", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades23.png", precio: "$1000" },
-                { id: "24", nombre: "Orégano, Cúrcuma, Paprika", imagen: "assets/images/variedades24.png", precio: "$1000" },
-                { id: "25", nombre: "Piure", imagen: "assets/images/variedades25.png", precio: "$1000" },
-                { id: "26", nombre: "Albahaca", imagen: "assets/images/variedades26.png", precio: "$1000" },
-                { id: "27", nombre: "Maracuyá", imagen: "assets/images/variedades27.png", precio: "$1000" },
-                { id: "28", nombre: "Aceituna", imagen: "assets/images/variedades28.png", precio: "$1000" },
-                { id: "29", nombre: "Semilla de Cilantro", imagen: "assets/images/variedades29.png", precio: "$1000" },
-                { id: "30", nombre: "Maqui", imagen: "assets/images/variedades30.png", precio: "$1000" },
-                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png", precio: "$1000" },
-                { id: "32", nombre: "Ají Puta Madre", imagen: "assets/images/variedades32.png", precio: "$1000" },
-                { id: "33", nombre: "De Cáhuil", imagen: "assets/images/variedades33.png", precio: "$1000" },
+                { id: "01", nombre: "Cebolla Morada y Ajo Chilote", imagen: "assets/images/variedades1.png" , precio: "$1000", descripcion: "sal cebolla morada y ajo chilote: Queda muy bien con: Carnes Rojas, Cerdo a la Parrilla, Verduras Salteadas, Ensaladas, Chimichurri, Vinagretas." },
+                { id: "02", nombre: "Cochayuyo", imagen: "assets/images/variedades2.png", precio: "$1000", descripcion: "sal cochayuyo: Queda muy bien con: Carbonadas, Cazuelas, Ensaladas, Chupe de Choritos u otros Productos del Mar."},
+                { id: "03", nombre: "Carmenere", imagen: "assets/images/variedades3.png", precio: "$1000", descripcion: "sal carmenere: Queda muy bien con: Carnes Rojas." },
+                { id: "04", nombre: "Mostaza y Semillas", imagen: "assets/images/variedades4.png", precio: "$1000", descripcion: "sal mostaza y semillas: Queda muy bien con: Pollo, Limoneta, Vinagreta, Ensaladas." },
+                { id: "05", nombre: "Limón, Pimienta, Ajo, Cebolla", imagen: "assets/images/variedades5.png", precio: "$1000", descripcion: "sal limon, pimienta, ajo, cebolla: Queda muy bien con: Ensaladas, Pescados, Mariscos, Mayonesa, Limoneta, Vinagreta, Chimichurri." },
+                { id: "06", nombre: "Limón Merken", imagen: "assets/images/variedades6.png", precio: "$1000", descripcion: "sal limon merken: Queda muy bien con: Carnes Blancas, Michelada." },
+                { id: "07", nombre: "Pimienta Merkén", imagen: "assets/images/variedades7.png", precio: "$1000", descripcion: "sal pimienta merken: Queda muy bien con: Carnes Rojas, Carnes Blancas, Papas Bravas, Cremas, Puré Picante." },
+                { id: "08", nombre: "Orégano, Ajo, Merken", imagen: "assets/images/variedades8.png", precio: "$1000", descripcion: "sal oregano, ajo, merken: Queda muy bien con: Carnes Rojas, Carnes Blancas, Carbonadas," },
+                { id: "09", nombre: "Romero", imagen: "assets/images/variedades9.png", precio: "$1000", descripcion: "sal romero: Queda muy bien con: Pollo Asado, Pescados a la Parrilla, Guarniciones." },
+                { id: "10", nombre: "Eneldo", imagen: "assets/images/variedades10.png", precio: "$1000", descripcion: "sal eneldo: Queda muy bien con: Salmón, Salsas, Mayonesa." },
+                { id: "11", nombre: "Cúrcuma, Ajo", imagen: "assets/images/variedades11.png",precio: "$1000", descripcion: "sal curcuma ajo: Queda muy bien con: Salsas, Guisos, Cremas, Verduras, Guarniciones." },
+                { id: "12", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades12.png", precio: "$1000", descripcion: "sal tomate cilantro cebolla: Queda muy bien con: Carnes, Pebre." },
+                { id: "13", nombre: "Ajo, Tomillo, Orégano, Cebolla", imagen: "assets/images/variedades13.png", precio: "$1000", descripcion: "sal ajo, tomillo, oregano, cebolla: Queda muy bien con: Pizza, Todas las Proteínas, Encurtidos, Vinagretas" },
+                { id: "14", nombre: "Mix Pimienta", imagen: "assets/images/variedades14.png", precio: "$1000", descripcion: "sal mix pimientas: Queda muy bien con: Carnes Rojas, Ensaladas." },
+                { id: "15", nombre: "Rosada del Himalaya con Pimienta", imagen: "assets/images/variedades15.png", precio: "$1000", descripcion: "sal rosada del himalaya con pimienta: Queda muy bien con: Carnes de todo tipo, Verduras, Ensaladas." },
+                { id: "16", nombre: "Rosada del Himalaya", imagen: "assets/images/variedades16.png", precio: "$1000", descripcion: "sal rosada del himalaya: Queda muy bien con: Todo uso." },
+                { id: "17", nombre: "Flor de Jamaica", imagen: "assets/images/variedades17.png", precio: "$1000", descripcion: "sal flor de jamaica: Queda muy bien con: Ensaladas, Cocteles." },
+                { id: "18", nombre: "Ajo Limón", imagen: "assets/images/variedades18.png", precio: "$1000", descripcion: "sal ajo limon: Queda muy bien con: Carnes Blancas, Limonetas, Encurtidos, Ensaladas." },
+                { id: "19", nombre: "Cúrcuma, Ajo, Pimienta", imagen: "assets/images/variedades19.png", precio: "$1000", descripcion: "sal curcuma ajo pimienta: Queda muy bien con: Guisos, Cremas Rojas, Verduras, Guarniciones." },
+                { id: "20", nombre: "Merkén, Ajo, Perejil, Orégano", imagen: "assets/images/variedades20.png", precio: "$1000", descripcion: "sal merken ajo perejil oregano: Queda muy bien con: Carnes al horno, legumbres, empanadas, papas salteadas." },
+                { id: "21", nombre: "Erizo", imagen: "assets/images/variedades21.png", precio: "$1000", descripcion: "sal erizo: Queda muy bien con: Mariscos, pastas con frutos del mar, ceviches." },
+                { id: "22", nombre: "Cebolla Caramelizada", imagen: "assets/images/variedades22.png", precio: "$1000", descripcion: "sal cebolla caramelizada: Queda muy bien con: Hamburguesas, tortillas, arroces, carnes salteadas." },
+                { id: "23", nombre: "Tomate, Cilantro, Cebolla", imagen: "assets/images/variedades23.png", precio: "$1000", descripcion: "sal tomate cilantro cebolla: Queda muy bien con: Tacos, salsas, sopas, platos mexicanos." },
+                { id: "24", nombre: "Orégano, Cúrcuma, Paprika", imagen: "assets/images/variedades24.png", precio: "$1000", descripcion: "sal oregano curcuma paprika: Queda muy bien con: Pastas, verduras asadas, carnes blancas, pizzas." },
+                { id: "25", nombre: "Piure", imagen: "assets/images/variedades25.png", precio: "$1000", descripcion: "sal piure: Queda muy bien con: Mariscos, ceviches, sopas marinas, arroces con pescado." },
+                { id: "26", nombre: "Albahaca", imagen: "assets/images/variedades26.png", precio: "$1000", descripcion: "sal albahaca: Queda muy bien con: Pastas, ensaladas, pizzas, sándwiches." },
+                { id: "27", nombre: "Maracuyá", imagen: "assets/images/variedades27.png", precio: "$1000", descripcion: "Sal Maracuyá: Queda muy bien con: pescados, mariscos, ensaladas tropicales, postres cítricos, cócteles refrescantes." },
+                { id: "28", nombre: "Aceituna", imagen: "assets/images/variedades28.png", precio: "$1000", descripcion: "Sal Aceituna: Queda muy bien con: panes artesanales, pizzas, pastas, quesos, carnes rojas." },
+                { id: "29", nombre: "Semilla de Cilantro", imagen: "assets/images/variedades29.png", precio: "$1000", descripcion: "Sal Semilla de Cilantro: Queda muy bien con: guisos, arroces, carnes blancas, legumbres, adobos." },
+                { id: "30", nombre: "Maqui", imagen: "assets/images/variedades30.png", precio: "$1000", descripcion: "Sal Maqui: Queda muy bien con: batidos, yogures, postres frutales, carnes magras, ensaladas frescas." },
+                { id: "31", nombre: "Ajo Negro", imagen: "assets/images/variedades31.png", precio: "$1000", descripcion: "Sal Ajo Negro: Queda muy bien con: carnes asadas, guisos intensos, risottos, verduras al horno." },
+                { id: "32", nombre: "Ají Puta Madre", imagen: "assets/images/variedades32.png", precio: "$1000", descripcion: "Sal Ají Puta Madre: Queda muy bien con: carnes rojas, salsas picantes, empanadas, platos de cocina chilena." },
+                { id: "33", nombre: "De Cáhuil", imagen: "assets/images/variedades33.png", precio: "$1000", descripcion: "Sal de Cáhuil: Queda muy bien con: todo tipo de carnes, asados, mariscos, preparaciones tradicionales." },
             ];
             //Plantilla del producto que se rellena
             productos.forEach(producto => {
-                let mensaje = encodeURIComponent(`Me interesa el siguiente artículo: ${producto.nombre}`);
-                let whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-    
-                let productoHTML = `
-                    <div class="mb-30 event-list product-item" data-name="${producto.nombre}">
-                        <div class="row align-items-center d-flex flex">
-                            <div class="col-md-3 text-center">
-                                <div class="text-secondary display-3">${producto.id}</div>
-                            </div>
-                            <div class="col-md-6 text-center text-sm-left">
-                                <a href="${whatsappURL}" class="h3" target="_blank">${producto.nombre}</a>
-                                <div class="pt-3">
-                                <ul class="list-unstyled">
-                                    <li><strong>Molinillo 80g:</strong> $3.000</li>
-                                    <li><strong>Molinillo 160g:</strong> $6.500</li>
-                                    <li><strong>Molinillo 300g Parrillera:</strong> $6.000</li>
-                                    <li><strong>Doypack 200g:</strong> $3.500</li>
-                                </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center">
-                                <a href="${whatsappURL}" target="_blank">
-                                    <img src="${producto.imagen}" alt="${producto.nombre}" class="img-iconos">
-                                </a>
-                            </div>
+    let mensaje = encodeURIComponent(`Me interesa el siguiente artículo: ${producto.nombre}`);
+    let whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+    let productoHTML = `
+        <div class="mb-30 event-list product-item" data-name="${producto.nombre}">
+            <div class="row align-items-center d-flex flex">
+                <div class="col-md-3 text-center">
+                    <div class="text-secondary display-3">${producto.id}</div>
+                </div>
+                <div class="col-md-6 text-center text-sm-left">
+                    <a href="${whatsappURL}" class="h3" target="_blank">${producto.nombre}</a>
+                    <div class="pt-3">
+                        <div class="d-flex align-items-center">
+                            <ul class="list-unstyled me-2">
+                                <li><strong>Molinillo 80g:</strong> $3.000</li>
+                                <li><strong>Molinillo 160g:</strong> $6.500</li>
+                                <li><strong>Molinillo 300g Parrillera:</strong> $6.000</li>
+                                <li><strong>Doypack 200g:</strong> $3.500</li>
+                            </ul>
+                            <p style="margin-left: 20px;">${producto.descripcion}</p>
                         </div>
                     </div>
-                `;
-                contenedor.innerHTML += productoHTML;
-            });
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="${whatsappURL}" target="_blank">
+                        <img src="${producto.imagen}" alt="${producto.nombre}" class="img-iconos">
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    contenedor.innerHTML += productoHTML;
+});
         }
-            </script>                    
+            </script>                   
             <div id="productList"></div> <!-- Aquí se insertarán los productos dinámicamente -->
             </div>
         </div>
@@ -202,17 +205,35 @@
     </div>
     <!--footer-->
    <!--footer-->
-<footer class="bg-dark text-white py-4">
+   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
         <p class="mb-2">&copy; 2025 Vajalt - Todos los derechos reservados</p>
         <ul class="list-inline">
             <li class="list-inline-item"><a href="#" class="text-white">Términos y condiciones</a></li>
             <li class="list-inline-item"><a href="#" class="text-white">Política de privacidad</a></li>
         </ul>
+        <div class="navbar-tools d-flex justify-content-center"> <!-- Alineación centrada -->
+            <ul class="list-inline d-flex justify-content-center">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/share/1BC77KcAXN/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/sal.vajalt/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://wa.me/56940978255">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <p class="mt-3">"El sabor de lo auténtico"</p>
     </div>
 </footer>
-
     <!--/.footer-->
     <!--/.footer-->
     <!--compile plugins-->
