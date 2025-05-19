@@ -2,6 +2,8 @@
 
 Vajalt es una tienda especializada en la venta de sales gourmet, cuidadosamente seleccionadas para realzar el sabor de tus comidas. Ofrecemos una amplia variedad de mezclas únicas que combinan ingredientes naturales, como cebolla morada y ajo chilote, sal de cochayuyo, pimienta merkén, y muchas más. 
 
+Link de la pagina: https://682aa8063ccbcb8d0754f235--ephemeral-kitsune-066f45.netlify.app/
+
 ## Características del Proyecto
 
 - **Catálogo Variado:** Más de 30 tipos de sales gourmet con combinaciones innovadoras.  
@@ -15,4 +17,6 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 1. Clona el repositorio:  
    ```sh
    git clone https://github.com/benguuuz/traspaso-vajalt
+
+2. CLick derecho en index y abrir con el navegador que prefieras
 
