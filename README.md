@@ -1,6 +1,8 @@
 # Vajalt - El Sabor de lo Auténtico
 
-Vajalt es una tienda especializada en la venta de sales gourmet, cuidadosamente seleccionadas para realzar el sabor de tus comidas. Ofrecemos una amplia variedad de mezclas únicas que combinan ingredientes naturales, como cebolla morada y ajo chilote, sal de cochayuyo, pimienta merkén, y muchas más. 
+Vajalt es una tienda especializada en la venta de sales gourmet, cuidadosamente seleccionadas para realzar el sabor de tus comidas. Ofrecemos una amplia variedad de mezclas únicas que combinan ingredientes naturales, como cebolla morada y ajo chilote, sal de cochayuyo, pimienta merkén, y muchas más.
+
+Link de la pagina oficial: https://682b86c559c4f5f86ebde0a5--subtle-palmier-87b8ef.netlify.app/
 
 ## Características del Proyecto
 
