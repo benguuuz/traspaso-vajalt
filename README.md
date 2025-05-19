@@ -4,6 +4,8 @@ Vajalt es una tienda especializada en la venta de sales gourmet, cuidadosamente 
 
 Link de la pagina oficial: https://682b86c559c4f5f86ebde0a5--subtle-palmier-87b8ef.netlify.app/
 
+Link de la pagina: https://682aa8063ccbcb8d0754f235--ephemeral-kitsune-066f45.netlify.app/
+
 ## Características del Proyecto
 
 - **Catálogo Variado:** Más de 30 tipos de sales gourmet con combinaciones innovadoras.  
@@ -17,4 +19,6 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 1. Clona el repositorio:  
    ```sh
    git clone https://github.com/benguuuz/traspaso-vajalt
+
+2. CLick derecho en index y abrir con el navegador que prefieras
 
